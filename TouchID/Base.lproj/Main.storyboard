@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="15A243d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pyH-Xj-E2u">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TouchID" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oea-BL-TBK">
+                                <rect key="frame" x="256" y="285" width="88" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Authenticate"/>
+                                <connections>
+                                    <action selector="authenticateUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w8c-Ku-Ulf"/>
+                                </connections>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZm-cr-ZX1">
+                                <rect key="frame" x="59" y="64" width="481" height="339"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VZm-cr-ZX1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="39" id="44b-2D-AJa"/>
+                            <constraint firstItem="VZm-cr-ZX1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7Dy-t9-vhP"/>
+                            <constraint firstItem="Oea-BL-TBK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FcP-8r-BLI"/>
+                            <constraint firstItem="Oea-BL-TBK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n1W-Zt-XhY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VZm-cr-ZX1" secondAttribute="bottom" constant="197" id="pNC-Xu-8xv"/>
+                            <constraint firstItem="VZm-cr-ZX1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="paD-k3-yj7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dvz-9G-a9U"/>
+                    <connections>
+                        <outlet property="secret" destination="VZm-cr-ZX1" id="t6G-Ol-40O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HJt-wu-GDD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pyH-Xj-E2u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XoD-XH-gZh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Nxo-Gu-PzU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEL-ZN-KJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="1047"/>
+        </scene>
+    </scenes>
+</document>
